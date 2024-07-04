@@ -65,7 +65,26 @@ client_x509_cert_url = ""
 universe_domain = ""
 ~~~~
 
+#### Instalar as depêndencias
+numpy ( deve ser instalado com pip install "numpy>=1.19.3,<2.0.0" )
+pandas
+plotly
+st-gsheets-connection
+streamlit
+
 ## Deploy para o streamlit.io
+
+#### Criar o requirements.txt
+01 - Rodar o comando no shell do terminal
+~~~~
+pip freeze > requirements.txt
+~~~~
+02 - Acessar o arquivo requirements.txt e apagar tudo que não for:
+numpy
+pandas
+plotly
+st-gsheets-connection
+streamlit
 
 #### Enviar a aplicação para o repositório do github
 
@@ -73,9 +92,17 @@ universe_domain = ""
 02 - Acessar o repositório no github e copiar o link do repositório (no meu caso: foi criado em: https://github.com/edwdev-oficial/writeInGoogleSheets.git)
 03 - Criar o arquivo .gitignore com os seguintes arquivos e diretórios
 ~~~~
+credentials.json
 
+venv/
+.streamlit/
 ~~~~
 03 - Rodar o git init no terminal
+04 - Rodar o git add . no terminal
+05 - Rodar o git commit -m "first commit" no terminal
+06 - Rodar o git remote add origin <URL DO REPOSITÓRIO>
+07 - Rodar o git push -u origin master no terminal
+
 
 
 
